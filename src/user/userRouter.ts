@@ -5,6 +5,5 @@ const userRouter = express.Router();
 //routes
 
 userRouter.post("/register", createUser);
-// userRouter.post("/register", createUser);
 
 export default userRouter;
