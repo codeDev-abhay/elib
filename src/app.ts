@@ -2,6 +2,7 @@ import express from "express";
 import createHttpError from "http-errors";
 import globalErrorHandler from "./middlewares/globalErrorHandler";
 import userRouter from "./user/userRouter";
+import bookRouter from "./book/bookRouter";
 const app = express();
 app.use(express.json()); // Middleware to parse JSON bodies
 
@@ -15,6 +16,7 @@ app.get("/", (req, res, next) => {
 });
 
 app.use("/api/users", userRouter);
+app.use("/api/books", bookRouter);
 
 //(●'◡'●)END(^///^)£🌮
 
